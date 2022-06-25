@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>당뇨 위험 예측</title>
+    
+
+</head>
+
+<body>    
+    <div class="container">
+        <h2 class='container-heading'><span class="heading_font">당뇨 위험 예측</span></h2>
+    </div>
+
+    <div class="predict-container">
+        <form action="{{ url_for('predict') }}" method="POST">
+            <br>
+            <h3>Pregnancies</h3>
+            <input id="first" name="Pregnancies" placeholder="임신 횟수" required="required">
+            <br>
+            <h3>Glucose</h3>
+            <input id="second" name="Glucose" placeholder="혈당 수치" required="required">
+            <br>
+            <h3>Blood Pressure</h3>
+            <input id="third" name="BloodPressure" placeholder="(mm Hg)" required="required">
+            <br>
+            <h3>Insulin</h3>
+            <input id="fourth" name="Insulin" placeholder="(mu U/ml)" required="required">
+            <br>
+            <h3>Body Mass Index</h3>
+            <input id="fifth" name="BMI" placeholder="몸무게/(키 m)^2" required="required">
+            <br>
+            <h3>Diabetes Pedigree Function</h3>
+            <input id="sixth" name="DiabetesPedigreeFunction" placeholder="친인척 당뇨 이력" required="required">
+            <br>
+            <h3>Age</h3>
+            <input id="seventh" name="Age" placeholder="나이" required="required">
+            <br>
+            <br>
+            <br>
+            <button id="sub" type="submit ">확인하기</button>
+            <br>
+            <br>
+            <h3>{{ prediction }}</h3>
+            <br>
+            <br>
+            <p class='footer-description'>@2022 Doyun Ahn</p>
+
+        </form>
+
+    
+    </div>
+
+<style>
+body
+{background-image:url("https://images.pexels.com/photos/6941883/pexels-photo-6941883.jpeg?cs=srgb&dl=pexels-nataliya-vaitkevich-6941883.jpg&fm=jpg");
+height: 100%;
+
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;}
+
+body{
+	font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.container-heading{
+    margin: 0;
+}
+
+.heading_font{
+    color: black;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 50px;
+	font-weight: normal;
+}
+
+        #first {
+            border-radius: 14px;
+            height: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #second {
+            border-radius: 14px;
+            height: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #third {
+            border-radius: 14px;
+            height: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #fourth {
+            border-radius: 14px;
+            height: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #fifth {
+            border-radius: 14px;
+            height: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #sixth {
+            border-radius: 14px;
+            height: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #seventh {
+            border-radius: 14px;
+            height: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+
+/* Button */
+#sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+
+
+
+
+</style>
+
+</body>
+
+</html>
