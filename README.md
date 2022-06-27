@@ -3,8 +3,8 @@
 # 당뇨병 예측 서비스
 
 ## Data 폴더
-diabetes.csv (kaggle 데이터 다운로드)/
-diabetes_ml.csv (머신러닝 파일)/
+diabetes.csv (kaggle 데이터 다운로드)\
+diabetes_ml.csv (머신러닝 파일)
 
 ## diabetes_app 폴더
 templates\
